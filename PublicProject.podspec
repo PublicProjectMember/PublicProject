@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
   spec.name         = 'PublicProject'
-  spec.version      = '0.1.6'
+  spec.version      = '0.0.1'
   spec.license      = 'MIT'
   spec.summary      = 'PublicProject 是一个基础框架'
-  spec.homepage     = 'http://182.92.5.161'
-  spec.author       = {"chunguiLiu"=>"chunguiLiu@126.com"}
-  spec.source       = { :git => 'git@182.92.5.161:/home/git/liuchungui/PublicProject.git', :tag => spec.version }
+  spec.homepage     = 'https://github.com/PublicProjectMember/PublicProject'
+  spec.author       = {"liuchungui"=>"chunguiLiu@126.com"}
+  spec.source       = { :git => 'https://github.com/PublicProjectMember/PublicProject.git', :tag => spec.version }
   spec.platform     = :ios, '7.0'
   spec.requires_arc = true
 
