@@ -74,26 +74,26 @@ Pod::Spec.new do |spec|
   end
 
   # 引用的第三方开源组件
-  spec.subspec 'Reference' do |refrencen|
-    refrencen.subspec 'BGUnlockController' do |unlock|
-      unlock.source_files = 'Reference/BGUnlockController/*.{h,m}'
-      unlock.public_header_files = 'Reference/BGUnlockController/*.h'
-      unlock.resource = 'Reference/BGUnlockController/*.xib'
+  spec.subspec 'References' do |references|
+    references.subspec 'BGUnlockController' do |unlock|
+      unlock.source_files = 'References/BGUnlockController/*.{h,m}'
+      unlock.public_header_files = 'References/BGUnlockController/*.h'
+      unlock.resource = 'References/BGUnlockController/*.xib'
     end
 
-    refrencen.subspec 'BGPopoverController' do |bgpopovercontroller|
-      bgpopovercontroller.source_files = 'Reference/BGPopoverController/*.{h,m}'
-      bgpopovercontroller.public_header_files = 'Reference/BGPopoverController/*.h'
+    references.subspec 'BGPopoverController' do |bgpopovercontroller|
+      bgpopovercontroller.source_files = 'References/BGPopoverController/*.{h,m}'
+      bgpopovercontroller.public_header_files = 'References/BGPopoverController/*.h'
     end
-    refrencen.subspec 'RatingEvaluateView' do |ratingevaluateview|
-      ratingevaluateview.source_files = 'Reference/RatingEvaluateView/*.{h,m}'
-      ratingevaluateview.public_header_files = 'Reference/RatingEvaluateView/*.h'
+    references.subspec 'RatingEvaluateView' do |ratingevaluateview|
+      ratingevaluateview.source_files = 'References/RatingEvaluateView/*.{h,m}'
+      ratingevaluateview.public_header_files = 'References/RatingEvaluateView/*.h'
       ratingevaluateview.dependency  'PublicProject/Additions'
     end
-    refrencen.subspec 'SegmentView' do |segmentview|
-      segmentview.source_files = 'Reference/SegmentView/*.{h,m}'
-      segmentview.resource = 'Reference/SegmentView/*.xib'
-      segmentview.public_header_files = 'Reference/SegmentView/*.h'
+    references.subspec 'SegmentView' do |segmentview|
+      segmentview.source_files = 'References/SegmentView/*.{h,m}'
+      segmentview.resource = 'References/SegmentView/*.xib'
+      segmentview.public_header_files = 'References/SegmentView/*.h'
     end
   end
 
