@@ -75,6 +75,7 @@ Pod::Spec.new do |spec|
 
   # 引用的第三方开源组件
   spec.subspec 'References' do |references|
+    references.dependency  'PublicProject/Additions'
     references.subspec 'BGUnlockController' do |unlock|
       unlock.source_files = 'References/BGUnlockController/*.{h,m}'
       unlock.public_header_files = 'References/BGUnlockController/*.h'
