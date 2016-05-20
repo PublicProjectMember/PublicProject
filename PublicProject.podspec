@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'PublicProject'
-  spec.version      = '0.0.1'
+  spec.version      = '0.0.2'
   spec.license      = 'MIT'
   spec.summary      = 'PublicProject 是一个基础框架'
   spec.homepage     = 'https://github.com/PublicProjectMember/PublicProject'
@@ -39,7 +39,6 @@ Pod::Spec.new do |spec|
     utils.source_files = 'Utils/**/*.{h,m}'
     utils.public_header_files = 'Utils/*.h'
     utils.dependency 'PublicProject/Macro'
-    utils.frameworks = 'Foundation'
   end
 
   spec.subspec 'Vendors' do |vendors|
@@ -79,7 +78,7 @@ Pod::Spec.new do |spec|
     refrencen.subspec 'BGUnlockController' do |unlock|
       unlock.source_files = 'Reference/BGUnlockController/*.{h,m}'
       unlock.public_header_files = 'Reference/BGUnlockController/*.h'
-      unlock.resource = 'BGUnlockController/*.xib'
+      unlock.resource = 'Reference/BGUnlockController/*.xib'
     end
 
     refrencen.subspec 'BGPopoverController' do |bgpopovercontroller|
@@ -94,7 +93,7 @@ Pod::Spec.new do |spec|
     refrencen.subspec 'SegmentView' do |segmentview|
       segmentview.source_files = 'Reference/SegmentView/*.{h,m}'
       segmentview.resource = 'Reference/SegmentView/*.xib'
-      segmentview.public_header_files = 'SegmentView/*.h'
+      segmentview.public_header_files = 'Reference/SegmentView/*.h'
     end
   end
 
