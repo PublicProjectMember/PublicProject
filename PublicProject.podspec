@@ -30,13 +30,6 @@ Pod::Spec.new do |spec|
     macro.public_header_files = 'Classes/Macro/*.h'
   end
 
-  spec.subspec 'Utils' do |utils|
-    utils.source_files = 'Classes/Utils/**/*.{h,m}'
-    utils.public_header_files = 'Classes/Utils/*.h'
-    utils.dependency 'PublicProject/Macro'
-    utils.frameworks = 'Foundation'
-  end
-
   spec.subspec 'Vendors' do |vendors|
     vendors.subspec 'Timer' do |timer|
       timer.source_files = 'Classes/Vendors/Timer/**/*.{h,m}'
