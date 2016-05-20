@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/PublicProjectMember/PublicProject.git', :tag => spec.version }
   spec.platform     = :ios, '7.0'
   spec.requires_arc = true
+  spec.frameworks = 'Foundation'
 
   spec.subspec 'Helper' do |helper|
     helper.source_files = 'Classes/Helper/**/*.{h,m}'
@@ -33,6 +34,7 @@ Pod::Spec.new do |spec|
     utils.source_files = 'Classes/Utils/**/*.{h,m}'
     utils.public_header_files = 'Classes/Utils/*.h'
     utils.dependency 'PublicProject/Macro'
+    utils.frameworks = 'Foundation'
   end
 
   spec.subspec 'Vendors' do |vendors|
