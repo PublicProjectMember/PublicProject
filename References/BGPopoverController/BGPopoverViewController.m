@@ -8,6 +8,7 @@
 
 #import "BGPopoverViewController.h"
 
+#define BGPopoverViewControllerRGBA(r, g, b, a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
 @interface BGPopoverViewController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIWindow *window;
 @end
@@ -33,7 +34,7 @@
 
 - (void)show {
     self.window.rootViewController = self;
-    self.window.layer.backgroundColor = RGBA(0, 0, 0, 0.6).CGColor;
+    self.window.layer.backgroundColor = BGPopoverViewControllerRGBA(0, 0, 0, 0.6).CGColor;
     self.view.frame = CGRectMake((self.window.frame.size.width-self.contentSize.width)/2.0, (self.window.frame.size.height-self.contentSize.height)/2.0, self.contentSize.width, self.contentSize.height);
     self.view.layer.cornerRadius = 5.0;
     self.view.layer.masksToBounds = YES;

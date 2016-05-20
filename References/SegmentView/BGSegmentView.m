@@ -10,6 +10,9 @@
 #import "BGSegmentTextCell.h"
 
 static const CGFloat kBottomLineHeight = 2.0f;
+#define BGSegmentViewRGB(r, g, b) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:1.0f]
+#define BGSegmentUIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define kBGSegmentViewMainColor BGSegmentViewRGB(16.0f, 100.0f, 139.0f)
 @interface BGSegmentView ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) UIImageView *scrollLineImageView;
@@ -27,7 +30,7 @@ static const CGFloat kBottomLineHeight = 2.0f;
         self.bottomLineWidth = self.itemWidth;
         self.selectTextColor = [UIColor redColor];
         self.normalTextColor = [UIColor blackColor];
-        self.bottomLineColor = kMainColor;
+        self.bottomLineColor = kBGSegmentViewMainColor;
         [self setupViews];
     }
     return self;
@@ -43,7 +46,7 @@ static const CGFloat kBottomLineHeight = 2.0f;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    collectionView.backgroundColor = UIColorFromRGB(0xf1f1f1);
+    collectionView.backgroundColor = BGSegmentUIColorFromRGB(0xf1f1f1);
     collectionView.showsHorizontalScrollIndicator = NO;
     collectionView.showsVerticalScrollIndicator = NO;
     [self addSubview:collectionView];
