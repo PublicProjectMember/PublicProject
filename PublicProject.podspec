@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'PublicProject'
-  spec.version      = '0.0.2'
+  spec.version      = '0.0.3'
   spec.license      = 'MIT'
   spec.summary      = 'PublicProject 是一个基础框架'
   spec.homepage     = 'https://github.com/PublicProjectMember/PublicProject'
@@ -73,29 +73,29 @@ Pod::Spec.new do |spec|
     end
   end
 
-  # 引用的第三方开源组件
-  spec.subspec 'References' do |references|
-    references.dependency  'PublicProject/Additions'
-    references.subspec 'BGUnlockController' do |unlock|
-      unlock.source_files = 'References/BGUnlockController/*.{h,m}'
-      unlock.public_header_files = 'References/BGUnlockController/*.h'
-      unlock.resource = 'References/BGUnlockController/*.xib'
-    end
-
-    references.subspec 'BGPopoverController' do |bgpopovercontroller|
-      bgpopovercontroller.source_files = 'References/BGPopoverController/*.{h,m}'
-      bgpopovercontroller.public_header_files = 'References/BGPopoverController/*.h'
-    end
-    references.subspec 'RatingEvaluateView' do |ratingevaluateview|
-      ratingevaluateview.source_files = 'References/RatingEvaluateView/*.{h,m}'
-      ratingevaluateview.public_header_files = 'References/RatingEvaluateView/*.h'
-      ratingevaluateview.dependency  'PublicProject/Additions'
-    end
-    references.subspec 'SegmentView' do |segmentview|
-      segmentview.source_files = 'References/SegmentView/*.{h,m}'
-      segmentview.resource = 'References/SegmentView/*.xib'
-      segmentview.public_header_files = 'References/SegmentView/*.h'
-    end
-  end
+  # # 引用的第三方开源组件
+  # spec.subspec 'References' do |references|
+  #   references.dependency  'PublicProject/Additions'
+  #   references.subspec 'BGUnlockController' do |unlock|
+  #     unlock.source_files = 'References/BGUnlockController/*.{h,m}'
+  #     unlock.public_header_files = 'References/BGUnlockController/*.h'
+  #     unlock.resource = 'References/BGUnlockController/*.xib'
+  #   end
+  #
+  #   references.subspec 'BGPopoverController' do |bgpopovercontroller|
+  #     bgpopovercontroller.source_files = 'References/BGPopoverController/*.{h,m}'
+  #     bgpopovercontroller.public_header_files = 'References/BGPopoverController/*.h'
+  #   end
+  #   references.subspec 'RatingEvaluateView' do |ratingevaluateview|
+  #     ratingevaluateview.source_files = 'References/RatingEvaluateView/*.{h,m}'
+  #     ratingevaluateview.public_header_files = 'References/RatingEvaluateView/*.h'
+  #     ratingevaluateview.dependency  'PublicProject/Additions'
+  #   end
+  #   references.subspec 'SegmentView' do |segmentview|
+  #     segmentview.source_files = 'References/SegmentView/*.{h,m}'
+  #     segmentview.resource = 'References/SegmentView/*.xib'
+  #     segmentview.public_header_files = 'References/SegmentView/*.h'
+  #   end
+  # end
 
 end
