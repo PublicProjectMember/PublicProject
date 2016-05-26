@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'PublicProject'
-  spec.version      = '0.0.3'
+  spec.version      = '0.0.4'
   spec.license      = 'MIT'
   spec.summary      = 'PublicProject 是一个基础框架'
   spec.homepage     = 'https://github.com/PublicProjectMember/PublicProject'
@@ -9,6 +9,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '7.0'
   spec.requires_arc = true
   spec.frameworks = 'Foundation'
+
+  #指定xcode编译配置
+  spec.xcconfig = {
+   'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
+  }
 
   #helper方法
   spec.subspec 'Helper' do |helper|
