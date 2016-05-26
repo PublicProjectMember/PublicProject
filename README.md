@@ -1,2 +1,6 @@
 # PublicProject
-A public project
+
+###cocoapods安装
+```
+pod 'PublicProject'
+```
